@@ -73,7 +73,15 @@
   <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
   <script>
     // Initialize Firebase
-  var config = {
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
     apiKey: "AIzaSyDuJe2w5Ptc1AwM-Us-kWb2jYJuCr6UTOw",
     authDomain: "angularfire-54a57.firebaseapp.com",
     databaseURL: "https://angularfire-54a57.firebaseio.com",
@@ -82,7 +90,9 @@
     messagingSenderId: "160774038322",
     appId: "1:160774038322:web:0772925f2b5be2c2cfad2b"
   };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     const db = firebase.firestore();
   </script>
   <script src="/js/app.js"></script>
