@@ -51,7 +51,7 @@
 
   <!-- add recipe side nav -->
   <div id="side-form" class="sidenav side-form">
-    <form class="add-recipe container section">
+   <!--  <form class="add-recipe container section">
       <h6 >New Recipe</h6>
       <div class="divider"></div>
       <div class="input-field">
@@ -65,7 +65,593 @@
       <div class="input-field center">
         <button class="btn-small">Add</button>
       </div>
-    </form>
+    </form> -->
+    <section class="glass">
+			
+
+
+
+      <div class="cards">
+        <div class="header">
+          <div class="row">
+            <div class="col-20">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ81_vCshVzwC2Hs0mfcDlsHp6Mnt5USAH-9x432e1Kp2ncPHGm&usqp=CAU"  alt="STOP">
+             </div>
+              <div class="col-40 white">
+                <h1>COVID-19</h1>
+              </div>
+              <div class="col-40 white">
+                <h2>Employee Screening Questionnaire</h2>
+              </div>
+
+            </div>
+            <div class="row">
+              <h3>All Staff must complete before beginning their work shift or entering the
+                workplace.</h3>
+
+            </div>
+
+          </div>
+
+          <div class="card">
+            <form class="form-inline">
+              <div class="row">
+
+                <label>Search Employee Number:</label>
+
+
+
+                <input ng-model="search"  type="number" ng-onchange="onchange()" >
+             </div>
+
+                <div class="row" ng-show="false">
+                  <label>Enter first two letters of your first name for verifing:</label> <input  type="text" id="firstName">
+
+                </div>
+            </form>
+            <br>
+            <table>
+            
+                <tr>
+                <th>
+                  Select
+                </th>
+                <th>
+                  Employee Number
+                </th>
+                <th>
+                  First Name
+                </th>
+
+                <th>
+                  Last Name
+                </th>
+                
+               </tr>
+                <tr ng-repeat="item in employees|filter:search : true| limitTo:1:start">
+
+                  <td>
+                    <button  ng-click="select(employees.indexOf(item))" class="select">Select</button>
+                  </td>
+                  <td>{{ item[0] }}</td>
+                  <td>{{ item[1] }}</td>
+                  <td>{{ item[2] }}</td>
+
+
+
+
+
+
+                </tr>
+            
+            </table>
+
+          </div>
+          <form id="myForm" name="myForm" onsubmit="handleFormSubmit(this)">
+
+            <div class="card">
+
+
+              <div class="row">
+                <div class="col-30">
+                  Employee Number:
+                </div>
+                <div class="col-70">
+                  <input type="number" id="number" name="number"   class="number" readonly="true" Required >
+                                      </div>
+
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-30">
+                    Employee Name:
+                  </div>
+                  <div class="col-70">
+                    <input type="text" id="name" name="name" readonly="true"   Required>
+                                        </div>
+
+                  </div>
+
+                  <div ng-show="false">
+                    <br>
+                    <div class="row">
+                      <div class="col-25">
+                        <div>shift:</div>
+                      </div>
+                      <div class="col-60">
+                        <input type="text" id="shift" name="shift"    readonly="true"Required >
+
+
+                                      </div>
+                      </div>
+                      <br>
+
+                      <div class="row">
+                        <div class="col-25">
+                          <div>Supervisor:</div>
+                        </div>
+                        <div class="col-60">
+                          <input type="text" id="supervisor" name="supervisor"    readonly="true" Required >
+
+
+                        </div>
+                        </div>
+                        <br>
+                        
+
+                        <div class="row">
+                          <div class="col-25">
+                            <div>Email:</div>
+                          </div>
+                          <div class="col-60">
+                            <input type="text" id="email" name="email"    readonly="true" Required >
+
+
+                                      </div>
+                          </div>
+                          <br>
+
+                          <div class="row">
+                            <div class="col-25">
+                              <div>Phone:</div>
+                            </div>
+                            <div class="col-60">
+                              <input type="text" id="phone" name="phone"    readonly="true" Required>
+
+
+                                      </div>
+                            </div>
+
+
+
+
+                          </div>
+                        </div>
+                        <div class="card1">
+                          <div class="row">
+
+                            <h3>1. Do you have any the following new or worsening
+                              symptoms or signs？*</h3>
+
+
+
+                          </div>
+
+                          
+
+                              <div class="flex-container">
+
+
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/fever.ashx?h=262&la=en&w=265&hash=D354C81CBD4D8CA34E7CC612F382784696880388"  width="100%" height="50%" alt="Fever or chills">
+                                  <h3>Fever or chills</h3>
+                                </div>
+
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/coughing.ashx?h=262&la=en&w=265&hash=073A9BB08BEC7EB4EB93AF761A46A37856CFBBFC" width="100%" height="50%" alt="Cough">
+                                  <h3>Cough</h3>
+                                </div>
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/breathing-difficulty.ashx?h=262&la=en&w=265&hash=1F9872C04B8EB4791C76F0352932516B210000E5"  width="100%" height="50%" alt="Difficulty breathing or shortness of breathing">
+                                  <h3>Difficulty breathing or shortness of
+                                    breathing</h3>
+                                </div>
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/sore-throat.ashx?la=en&hash=4211FE48C4DB78B43B16F5748926B25E598F9CA9" width="100%" height="50%" alt="Sore throat or trouble swallowing">
+                                  <h3>Sore throat or trouble swallowing </h3>
+                                </div>
+
+
+
+
+
+
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/congestion-and-runny-nose.ashx?h=265&la=en&w=262&hash=06F976C13CB054438BC687581E3222686F7AF817"  width="100%" height="50%" alt="Runny or stuffy nose">
+                                  <h3>Runny or stuffy nose </h3>
+                                </div>
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/no-taste.ashx?la=en&hash=87DCDA689442BD2B3CD2549026A72F7A61D06594" width="100%" height="50%" alt="Decrease or loss of taste or smell">
+                                  <h3>Decrease or loss of taste or smell</h3>
+                                </div>
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/vomit.ashx?la=en&hash=020823CAD3F9C8032FCD2E4E097E8ADC9CC92B3A"  width="100%" height="50%" alt="Nausea, vomiting or diarrhea">
+                                  <h3>Nausea, vomiting or diarrhea</h3>
+                                </div>
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/fatigue.ashx?la=en&hash=F610858046BEC6D83C909079709F9AD469EB4470" width="100%" height="50%" alt="Not feeling well, extreme tiredness or sore muscles">
+                                  <h3>Not feeling well, extreme tiredness or sore
+                                    muscles </h3>
+                                </div>
+
+                                <div class="padding1">
+                                  <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/headache.ashx?la=en&hash=0BEF1E7744D6DA3E43967112231F1E802EE2C79E" width="100%" height="50%" alt="Pink eyes or headache">
+                                  <h3>Pink eyes or headache </h3>
+                                </div>
+
+
+                              </div>
+
+                              <!-- 	<div class="row">
+            
+                      <div class="col-25 padding1">
+                        <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/fever.ashx?h=262&la=en&w=265&hash=D354C81CBD4D8CA34E7CC612F382784696880388"  width="100%" height="50%" alt="Fever or chills">
+                        <h3>Fever or chills</h3>
+                      </div>
+                      
+                      <div class="col-25 padding1">
+                        <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/coughing.ashx?h=262&la=en&w=265&hash=073A9BB08BEC7EB4EB93AF761A46A37856CFBBFC" width="100%" height="50%" alt="Cough">
+                        <h3>Cough</h3>
+                      </div>
+                        <div class="col-25 padding1">
+                          <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/breathing-difficulty.ashx?h=262&la=en&w=265&hash=1F9872C04B8EB4791C76F0352932516B210000E5"  width="100%" height="50%" alt="Difficulty breathing or shortness of breathing">
+                          <h3>Difficulty breathing or shortness of breathing</h3>
+                       </div>
+                          <div class="col-25 padding1">
+                            <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/sore-throat.ashx?la=en&hash=4211FE48C4DB78B43B16F5748926B25E598F9CA9" width="100%" height="50%" alt="Sore throat or trouble swallowing">
+                            <h3>Sore throat or trouble swallowing </h3>
+                          </div>
+            
+                          </div>
+                          
+
+                            <div class="row">
+            
+                      <div class="col-20 padding1">
+                        <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/congestion-and-runny-nose.ashx?h=265&la=en&w=262&hash=06F976C13CB054438BC687581E3222686F7AF817"  width="50%" height="50%" alt="Runny or stuffy nose">
+                        <h3>Runny or stuffy nose </h3>
+                      </div>
+                      <div class="col-20 padding1">
+                        <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/no-taste.ashx?la=en&hash=87DCDA689442BD2B3CD2549026A72F7A61D06594" width="50%" height="50%" alt="Decrease or loss of taste or smell">
+                          <h3>Decrease or loss of taste or smell</h3>
+                      </div>
+                        <div class="col-20 padding1">
+                          <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/vomit.ashx?la=en&hash=020823CAD3F9C8032FCD2E4E097E8ADC9CC92B3A"  width="50%" height="50%" alt="Nausea, vomiting or diarrhea">
+                          <h3>Nausea, vomiting or diarrhea</h3>
+                       </div>
+                          <div class="col-20 padding1">
+                            <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/fatigue.ashx?la=en&hash=F610858046BEC6D83C909079709F9AD469EB4470" width="50%" height="50%" alt="Not feeling well, extreme tiredness or sore muscles">
+                            <h3>Not feeling well, extreme tiredness or sore muscles </h3>
+                          </div>
+
+                          <div class="col-20 padding1">
+                            <img src="https://www.hopkinsmedicine.org/-/media/project/jhm/icons/coronavirus/headache.ashx?la=en&hash=0BEF1E7744D6DA3E43967112231F1E802EE2C79E" width="50%" height="50%" alt="Pink eyes or headache">
+                            <h3>Pink eyes or headache </h3>
+                          </div>
+            
+                          </div>
+
+                         -->
+                              <div class="flex-container">
+                                <div class="red padding1">
+                                  <h3>If "YES" to any symptom: </h3>
+                                </div>
+                                <div>
+                                  <img src="https://www.tchd.org/ImageRepository/Document?documentId=6967" width="50%" height="50%" alt="Stay Home">
+                                  <h3>Stay home & self-isolate</h3>
+                                </div>
+
+                                <div class="red padding1">
+                                  <h1>+</h1>
+                                </div>
+                                <div>
+                                  <img src="http://www.rvh.on.ca/wp-content/uploads/2021/04/COVID-ICONS-04-300x300.png" width="50%" height="50%" alt="Get tested">
+                                  <h3>Get tested </h3>
+                                </div>
+                                <div class="red padding1">
+                                  <h2>or</h2>
+                                </div>
+                                <div><img src="https://www.bluecrossnc.com/sites/default/files/Icon_Doctor.png" width="50%" height="50%" alt="Contact a health care provider">
+                                  <h3>Contact a health care provider </h3>
+                                </div>
+
+                              </div>
+                              <!--   
+                          <div class="row">
+            
+                            <div class="col-10  red">
+                              <h3>If "YES" to any symptom: </h3>
+                            </div>
+            
+                            <div class="col-10  ">
+                                <img src="https://www.tchd.org/ImageRepository/Document?documentId=6967" width="50%" height="50%" alt="Stay Home">
+                            </div>
+                            <div class="col-10">
+                              <h3>Stay home & self-isolate</h3>
+                            </div>
+                            <div class="col-10 red padding1">
+                              <h1>+</h1>
+                            </div>
+                            <div class="col-10  ">
+                                <img src="http://www.rvh.on.ca/wp-content/uploads/2021/04/COVID-ICONS-04-300x300.png" width="50%" height="50%" alt="Get tested">
+                            </div>
+                            <div class="col-10">
+                              <h3>Get tested </h3>
+                            </div>
+                            <div class="col-10 red padding1">
+                              <h2>or</h2>
+                            </div>
+                            <div class="col-10  ">
+                                <img src="https://www.bluecrossnc.com/sites/default/files/Icon_Doctor.png" width="50%" height="50%" alt="Contact a health care provider">
+                            </div>
+                            <div class="col-10">
+                              <h3>Contact a health care provider </h3>
+                            </div>
+            
+            
+                          </div> -->
+                              <div class="row">
+                                *If you have an existing health condition that fives
+                                you the sysmtoms you
+                                should
+                                not answer YES, unless the symptomis new , difficult
+                                or getting worse. Look
+                                for
+                                changes from your normal symptoms.
+                              </div>
+                              <div class="row">
+
+                            <div class="col-10">
+                              <input type="radio" id="question11" name="question1"  class="big" value="Yes" Required>
+                              </div>
+                              <div class="col-10 red">
+                                <h3>Yes</h3>
+                              </div>
+                              <div class="col-10">
+                                <input type="radio" id="question12" name="question1"  class="big" value="No" Required>
+                    </div>
+                                <div class="col-10">
+                                  <h3>No</h3>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+
+
+                            <div class="card">
+
+                              <div class="row">
+
+                                <h3>2. Does anyone in your household have one or
+                                  more of the above symptoms?
+                                </h3>
+
+
+
+                              </div>
+
+                              <div class="row">
+
+                                <div class="col-10">
+                                  <input type="radio" id="question21" name="question2"  class="big" value="Yes" Required>
+                                                </div>
+                                  <div class="col-10 red">
+                                    <h3>Yes</h3>
+                                  </div>
+                                  <div class="col-10">
+                                    <input type="radio" id="question22" name="question2"  class="big" value="No" Required>
+                                      </div>
+                                    <div class="col-10">
+                                      <h3>No</h3>
+                                    </div>
+
+                                  </div>
+                                </div>
+
+                                <div class="card">
+                                  <div class="row">
+
+                                    <div>3. Have you been notified as a close
+                                      contact of someone with
+                                      COVID-19 or Been told to stay home and
+                                      self-isolate?</div>
+
+                                  </div>
+
+                                  <div class="row">
+
+                                    <div class="col-10">
+                                      <input type="radio" id="question31" name="question3"  class="big" value="Yes" Required>
+                                                </div>
+                                      <div class="col-10 red">
+                                        <h3>Yes</h3>
+                                      </div>
+                                      <div class="col-10">
+                                        <input type="radio" id="question32" name="question3"  class="big" value="No" Required>
+                                      </div>
+                                        <div class="col-10">
+                                          <h3>No</h3>
+                                        </div>
+
+                                      </div>
+
+                                    </div>
+                                    <div class="card">
+                                      <div class="row">
+
+                                        <div> 4. In the last 14 days, have
+                                          you or anyone in your
+                                          houlsehold
+                                          travelled outside of Canada?
+                                        </div>
+
+                                      </div>
+
+                                      <div class="row">
+
+                                        <div class="col-10">
+                                          <input type="radio" id="question41" name="question4"  class="big" value="Yes" Required>
+                                                </div>
+                                          <div class="col-10 red">
+                                            <h3>Yes</h3>
+                                          </div>
+                                          <div class="col-10">
+                                            <input type="radio" id="question42" name="question4"  class="big" value="No" Required>
+                                      </div>
+                                            <div class="col-10">
+                                              <h3>No</h3>
+                                            </div>
+
+                                          </div>
+
+                                        </div>
+                                        <div class="card">
+                                          <div class="row">
+
+                                            <div>5. Is anyone you live
+                                              with/carpool with
+                                              currently experiencing
+                                              any
+                                              COVID-19 symptoms and/or
+                                              waiting for test
+                                              results after
+                                              experiencing
+                                              symptoms?</div>
+
+                                          </div>
+
+                                          <div class="row">
+
+                                            <div class="col-10">
+                                              <input type="radio" id="question51" name="question5"  class="big" value="Yes" Required>
+                                                </div>
+                                              <div class="col-10 red">
+                                                <h3>Yes</h3>
+                                              </div>
+                                              <div class="col-10">
+                                                <input type="radio" id="question52" name="question5"  class="big" value="No" Required>
+                                             </div>
+                                                <div class="col-10">
+                                                  <h3>No</h3>
+                                                </div>
+
+                                            </div>
+
+                                            </div>
+
+                                            <div class="card">
+                                          <div class="row">
+
+                                            <div>6. In the last 10 days, have you tested positive on a rapid antigen test or a home-based self-testing kit?</div>
+
+                                          </div>
+
+                                          <div class="row">
+
+                                            <div class="col-10">
+                                              <input type="radio" id="question61" name="question6"  class="big" value="Yes" Required>
+                                                </div>
+                                              <div class="col-10 red">
+                                                <h3>Yes</h3>
+                                              </div>
+                                              <div class="col-10">
+                                                <input type="radio" id="question62" name="question6"  class="big" value="No" Required>
+                                             </div>
+                                                <div class="col-10">
+                                                  <h3>No</h3>
+                                                </div>
+
+                                            </div>
+
+                                            </div>
+
+                                            <div class="card">
+                                          <div class="row">
+
+                                            <div>7. In the last 14 days, have you received a COVID Alert exposure notification on your cell phone?</div>
+
+                                          </div>
+
+                                          <div class="row">
+
+                                            <div class="col-10">
+                                              <input type="radio" id="question71" name="question7"  class="big" value="Yes" Required>
+                                                </div>
+                                              <div class="col-10 red">
+                                                <h3>Yes</h3>
+                                              </div>
+                                              <div class="col-10">
+                                                <input type="radio" id="question72" name="question7"  class="big" value="No" Required>
+                                             </div>
+                                                <div class="col-10">
+                                                  <h3>No</h3>
+                                                </div>
+
+                                            </div>
+
+                                            </div>
+
+
+                                            <div class="card padding1">
+
+                                              <p>If you answered
+                                                <strong>"YES"</strong>
+                                                to any
+                                                of the questions</p>
+                                              <p><strong>STAY HOME</strong>
+                                                -
+                                                <strong>ADVISE YOUR SUPERVISOR</strong>
+                                                -
+                                                <strong>FOLLOW PUBLIC HEALTH ADVICE</strong>
+                                              </p>
+
+                                            </div>
+
+                                            <div class="card padding1">
+
+                                              <div class="row">
+
+                                                <input type="submit"  id="submit" name="submit" value="Submit" >
+                                              </div>
+                                             
+
+
+
+
+
+
+
+                                              </div>
+                                               <div class="card padding1">
+
+                                                 <div class="row">
+
+                                                  <!--  <div id="status" class="status padding1"></div>	 -->
+                                                </div>
+                                                <div class="row">
+
+                                                <div id="output" class="output padding1"></div>	
+                                                </div>
+                                              </div>
+
+
+                                            </div>
+
+          </form>
+
+  </section>
   </div>
 
   
