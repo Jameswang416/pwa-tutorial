@@ -86,7 +86,12 @@
     firebase.initializeApp(config);
     const db = firebase.firestore();
   </script>
-  <script src="/js/app.js"></script>
+   <script type="module">
+     importScripts(
+    'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+  );
+   </script>
+  <script src="/js/app.js"  ></script>
   <script src="/js/db.js"></script>
   <script src="/js/ui.js"></script>
 </body>
