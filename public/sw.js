@@ -3,7 +3,7 @@ importScripts(
   );
   console.log(workbox);
  
-  import {
+ /*  import {
     pageCache,
     imageCache,
     staticResourceCache,
@@ -19,4 +19,4 @@ importScripts(
   
   imageCache();
   
-  offlineFallback(); 
+  offlineFallback();  */
