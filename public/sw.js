@@ -3,20 +3,20 @@ importScripts(
   );
   console.log(workbox.recipes);
  
-  import {
+ /*  import {
     pageCache,
     imageCache,
     staticResourceCache,
     googleFontsCache,
     offlineFallback,
-  } from 'workbox.recipes;
+  } from 'workbox.recipes; */
   
-  pageCache();
+  workbox.recipes.pageCache();
   
-  googleFontsCache();
+  workbox.recipes.googleFontsCache();
   
-  staticResourceCache();
+  workbox.recipes.staticResourceCache();
   
-  imageCache();
+  workbox.recipes.imageCache();
   
-  offlineFallback(); 
+  workbox.recipes.offlineFallback(); 
