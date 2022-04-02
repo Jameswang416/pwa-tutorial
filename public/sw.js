@@ -3,13 +3,13 @@ importScripts(
   );
   console.log(workbox.recipes);
  
- /*  import {
+  import {
     pageCache,
     imageCache,
     staticResourceCache,
     googleFontsCache,
     offlineFallback,
-  } from 'workbox.workbox-recipes';
+  } from 'workbox.recipes;
   
   pageCache();
   
@@ -19,4 +19,4 @@ importScripts(
   
   imageCache();
   
-  offlineFallback();  */
+  offlineFallback(); 
