@@ -24,18 +24,18 @@ importScripts(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
     // Use a Cache First caching strategy
-    new workbox.registerRoute.CacheFirst({
+    new CacheFirst({
       // Put all cached files in a cache named 'images'
       cacheName: 'images1',
       plugins: [
         // Ensure that only requests that result in a 200 status are cached
-        new workbox.registerRoute.CacheFirst.CacheableResponsePlugin({
+        new CacheableResponsePlugin({
           statuses: [200],
         }),
         // Don't cache more than 50 items, and expire them after 30 days
-        new workbox.registerRoute.CacheFirst.ExpirationPlugin({
+        new ExpirationPlugin({
           maxEntries: 50,
-          maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
+          maxAgeSeconds: 60 , // 30 Days
         }),
       ],
     }),
