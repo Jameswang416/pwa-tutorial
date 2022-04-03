@@ -13,10 +13,10 @@ importScripts(
   
   workbox.recipes.pageCache();
   
-  workbox.recipes.googleFontsCache();
+ /*  workbox.recipes.googleFontsCache();
   
   workbox.recipes.staticResourceCache();
   
   workbox.recipes.imageCache();
   
-  workbox.recipes.offlineFallback(); 
+  workbox.recipes.offlineFallback();  */
