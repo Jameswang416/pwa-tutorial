@@ -29,11 +29,11 @@ importScripts(
       cacheName: 'images1',
       plugins: [
         // Ensure that only requests that result in a 200 status are cached
-        new CacheableResponsePlugin({
+        new workbox.CacheableResponsePlugin({
           statuses: [200],
         }),
         // Don't cache more than 50 items, and expire them after 30 days
-        new ExpirationPlugin({
+        new workbox.ExpirationPlugin({
           maxEntries: 50,
           maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
         }),
