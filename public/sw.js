@@ -1,7 +1,7 @@
 importScripts(
     'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
   );
-  console.log(workbox.recipes);
+  console.log(workbox.registerRoute);
  
  /*  import {
     pageCache,
@@ -19,7 +19,6 @@ importScripts(
   workbox.recipes.imageCache();
   
  workbox.recipes.offlineFallback(); 
- // Cache images with a Cache First strategy
  workbox.registerRoute(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
@@ -40,3 +39,4 @@ importScripts(
       ],
     }),
   );
+ // Cache images with a Cache First strategy
