@@ -16,7 +16,7 @@ importScripts(
   
   workbox.recipes.staticResourceCache();
   
-   /*workbox.recipes.imageCache();
+  workbox.recipes.imageCache();
   
-  workbox.recipes.offlineFallback(); 
+   /*workbox.recipes.offlineFallback(); 
   */
