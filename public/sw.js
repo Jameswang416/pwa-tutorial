@@ -19,6 +19,7 @@ importScripts(
   workbox.recipes.imageCache();
   
  workbox.recipes.offlineFallback(); 
+ workbox.registerRoute();
  /* workbox.registerRoute(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
