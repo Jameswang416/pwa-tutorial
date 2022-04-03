@@ -21,7 +21,7 @@ importScripts(
  workbox.recipes.offlineFallback(); 
  // This can be any strategy, CacheFirst used as an example.
 const strategy = new workbox.strategies.CacheFirst();
-const urls = ['/offline.html','/index'];
+const urls = ['/offline.html','/index.html','/js/app.js'];
 
 workbox.recipes.warmStrategyCache({urls, strategy});
  
