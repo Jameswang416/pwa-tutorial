@@ -20,6 +20,23 @@ importScripts(
   
  workbox.recipes.offlineFallback(); 
  workbox.registerRoute();
+
+ const strategy = new workbox.strategies.CacheFirst();
+const urls = ['/offline.html'];
+
+self.addEventListener('install', event => {
+  // handleAll returns two promises, the second resolves after all items have been added to cache.
+  const done = urls.map(
+    path =>
+      strategy.handleAll({
+        event,
+        request: new Request(path),
+      })[1]
+  );
+
+  event.waitUntil(Promise.all(done));
+});
+
  /* workbox.registerRoute(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
