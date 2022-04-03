@@ -14,9 +14,9 @@ importScripts(
   workbox.recipes.pageCache();
    workbox.recipes.googleFontsCache();
   
- /*  workbox.recipes.staticResourceCache();
+  workbox.recipes.staticResourceCache();
   
-  workbox.recipes.imageCache();
+   /*workbox.recipes.imageCache();
   
   workbox.recipes.offlineFallback(); 
   */
