@@ -26,7 +26,7 @@ importScripts(
     // Use a Cache First caching strategy
     new workbox.CacheFirst({
       // Put all cached files in a cache named 'images'
-      cacheName: 'images',
+      cacheName: 'images1',
       plugins: [
         // Ensure that only requests that result in a 200 status are cached
         new CacheableResponsePlugin({
