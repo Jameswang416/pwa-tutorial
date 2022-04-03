@@ -19,8 +19,13 @@ importScripts(
   workbox.recipes.imageCache();
   
  workbox.recipes.offlineFallback(); 
+ // This can be any strategy, CacheFirst used as an example.
+const strategy = new workbox.strategies.CacheFirst();
+const urls = ['/offline.html'];
+
+workbox.recipes.warmStrategyCache({urls, strategy});
  
- const strategy = new workbox.strategies.CacheFirst();
+/* const strategy = new workbox.strategies.CacheFirst();
 const urls = ['/offline.html'];
 
 self.addEventListener('install', event => {
@@ -35,7 +40,7 @@ self.addEventListener('install', event => {
 
   event.waitUntil(Promise.all(done));
 });
-
+ */
  /* workbox.registerRoute(
     // Check to see if the request's destination is style for an image
     ({ request }) => request.destination === 'image',
