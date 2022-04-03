@@ -19,8 +19,7 @@ importScripts(
   workbox.recipes.imageCache();
   
  workbox.recipes.offlineFallback(); 
- workbox.registerRoute();
-
+ 
  const strategy = new workbox.strategies.CacheFirst();
 const urls = ['/offline.html'];
 
