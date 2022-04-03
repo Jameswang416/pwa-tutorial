@@ -12,7 +12,7 @@ importScripts(
   } from 'workbox.recipes; */
   
   workbox.recipes.pageCache();
-   workbox.recipes.googleFontsCache();
+  workbox.recipes.googleFontsCache();
   
   workbox.recipes.staticResourceCache();
   
